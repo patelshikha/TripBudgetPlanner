@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:padding="16dp"
+    tools:context=".FilterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+      <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="3dp"
+        android:id="@+id/cv"
+        card_view:cardBackgroundColor="@color/buttonColor"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:text="Destination"
+            android:textSize="14sp"
+            android:textColor="@color/background"
+            android:textStyle="bold" />
+        <AutoCompleteTextView
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"
+        android:background="@drawable/corner"
+        android:drawableLeft="@drawable/ic_place_black_24dp"
+        android:drawablePadding="10dp"
+        android:hint="Toronto, Ontario"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textColorHighlight="@color/textColor"
+        android:textColorHint="@color/textColor" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="3dp"
+        android:id="@+id/cvv"
+        card_view:cardBackgroundColor="@color/buttonColor"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:text="Passanger"
+            android:textSize="14sp"
+            android:textColor="@color/background"
+            android:textStyle="bold" />
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/minus"
+            android:layout_width="30dp"
+            android:background="@color/background"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/minus_icon"
+            android:onClick="onClickIncDec"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/passanger"
+            android:layout_width="50dp"
+            android:text="0"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:layout_height="50dp"/>
+
+       <ImageButton
+           android:id="@+id/add"
+           android:layout_width="30dp"
+           android:layout_height="wrap_content"
+           android:onClick="onClickIncDec"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="15dp"
+           android:background="@color/background"
+           android:src="@drawable/plus_icon" />
+   </LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="29dp"
+        card_view:cardBackgroundColor="@color/buttonColor"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="3dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:text="Select Dates"
+            android:textSize="14sp"
+            android:textColor="@color/background"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="120dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:padding="10dp"
+                android:text="From"
+
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/corner"
+                android:drawablePadding="10dp"
+                android:hint="From"
+                android:layout_marginStart="60dp"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+
+                android:textColorHighlight="@color/textColor"
+                android:textColorHint="@color/textColor"  />
+            <Button
+                android:id="@+id/btnDateTo"
+                android:layout_width="120dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:background="@drawable/corner"
+                android:drawablePadding="10dp"
+                android:layout_marginLeft="35dp"
+                android:hint="To"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+
+                android:textColorHighlight="@color/textColor"
+                android:textColorHint="@color/textColor"  />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:onClick="CalculateBudget"
+        android:padding="15dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="Next"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDate"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="italic|bold" />
+</LinearLayout>
